@@ -19,6 +19,11 @@ const Card = ({repository, isFavorite}: CardProps) => {
     <div>
         {repository.name} || 
         {repository.created_at} ||
+        <div className="container mx-auto mt-5">
+            <button className='bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700'>
+                Botón con Tail
+            </button>
+        </div>
         <button className='button' onClick={toggleFavorite}>{!isFavorite ? 'No me gusta' : 'Me gusta'}</button>
         <hr />
     </div>

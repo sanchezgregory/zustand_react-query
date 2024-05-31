@@ -4,8 +4,9 @@ import { Repository } from './types.ts';
 
 async function fetchRepos(ctx: QueryFunctionContext) {
     const [_,githubUser] = ctx.queryKey
+    console.log(githubUser)
     const {data} = await api.get<Repository[]>(`/users/${githubUser}/repos`)
-    return data;
+    return data; 
 }
 
 export function useFetchRepositories(githubUser: string) {
